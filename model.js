@@ -24,7 +24,7 @@ Meteor.methods({
 			Squares.update({selected: true}, {$set: {selected: false}}, {multi: true});
 		}
 
-		if(Squares.find({solved: false}).count() === 34){
+		if(Squares.find({solved: false}).count() === 0){
 			//win
 			Meteor.call("restart");
 		}
