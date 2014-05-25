@@ -1,0 +1,31 @@
+<head>
+  <title>binary-hex-decimal</title>
+</head>
+
+<body>
+  {{> info}}
+  {{> grid}}
+</body>
+
+<template name="info">
+  <h1>Binary-Hex-Decimal</h1>
+  <p>Select numbers of the same value! Get stuck? Play with a friend!</p>
+</template>
+
+<template name="grid">
+	<table>
+        {{#each rows}}
+            <tr>{{> row}}</tr>
+        {{/each}}
+	</table>
+</template>
+
+<template name="row">
+        {{#each squares}}
+            <td>{{> square}}</td>
+        {{/each}}
+</template>
+
+<template name="square">
+    <div class="square {{selected_class}} {{solved_class}}">{{value}}<sub>{{base}}</sub></div>
+</template>

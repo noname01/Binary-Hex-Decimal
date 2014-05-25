@@ -1,0 +1,51 @@
+h1,p {
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	background-color: gray;
+}
+
+td {
+	border: 5px solid gray;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    display: table-cell;
+    background-color: silver;
+    font-size: 20pt;
+    text-align: center;
+    vertical-align: middle;	
+    margin: 0px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.square:hover{
+	background-color: gold;
+}
+
+.grid {
+    text-align: center;
+}
+
+sub {
+	color: gray;
+}
+
+.selected{
+	background-color:orange;
+}
+
+.solved{
+	background-color: white;
+}
+
+.solved:hover{
+	background-color: white;
+}
