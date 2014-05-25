@@ -67,3 +67,8 @@ sub {
 .solved:hover{
 	background-color: white;
 }
+
+#buttons {
+	text-align: center;
+	margin: 30px;
+}
