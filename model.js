@@ -10,7 +10,7 @@ Meteor.methods({
 		Squares.update({_id: id}, {$set: {selected: true}});
 		var selected_squares = Squares.find({selected: true});
 
-		if(selected_squares.count() === 2){	
+		if(selected_squares.count() >= 2){	
 			var num = [];
 			var ids = [];
 			selected_squares.forEach(function(doc){
@@ -23,6 +23,7 @@ Meteor.methods({
 			}
 			Meteor.setTimeout(clearSelected, 500);
 		}
+
 
 		if(Squares.find({solved: false}).count() === 0){
 			//win
