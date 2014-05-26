@@ -40,7 +40,7 @@ td {
     vertical-align: middle;	
     margin: 0px;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .square:hover{
@@ -57,6 +57,10 @@ sub {
 }
 
 .selected{
+	background-color: #FFFFB2;
+}
+
+.selected:hover{
 	background-color: #FFFFB2;
 }
 

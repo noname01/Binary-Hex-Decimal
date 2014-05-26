@@ -1,6 +1,10 @@
 Squares = new Meteor.Collection('squares');
 
 
+function clearSelected(){
+	Squares.update({selected: true}, {$set: {selected: false}}, {multi: true});	
+}
+
 Meteor.methods({
 	updateSelected: function(id){
 		Squares.update({_id: id}, {$set: {selected: true}});
@@ -17,11 +21,7 @@ Meteor.methods({
 				Squares.update({_id: ids[0]}, {$set: {solved: true}});	
 				Squares.update({_id: ids[1]}, {$set: {solved: true}});
 			}
-				
-		}
-
-		if(selected_squares.count() >= 3){
-			Squares.update({selected: true}, {$set: {selected: false}}, {multi: true});
+			Meteor.setTimeout(clearSelected, 500);
 		}
 
 		if(Squares.find({solved: false}).count() === 0){
